@@ -19,9 +19,20 @@ Design the following web pages for CEMS:
 1. **Home & Event Listing** – `index.html`  
 2. **Register Page** – `register.html`  
 3. **Login Page** – `login.html`
+4. **Forgot Password Page** – `forgot_password.html`
 
 📌## Lab 2 (Week 3): HTML Fundamentals 
+To apply responsive design on the Campus Event Management System using CSS. This lab sets
+the stage for future enhancements including responsiveness, interactivity, backend integration,
+and user management.
+
 📌### Tasks
+Banyak, tak rajin nak list satu2 :D
+-hero banner
+-color change when mouse hover
+-table style
+-sticky footer
+
 
 These pages are interconnected through hyperlinks, forming the basic navigation structure of the system.
 
