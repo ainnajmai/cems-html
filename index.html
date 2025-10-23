@@ -1,25 +1,43 @@
-<body>
- <header>
-    <div></div>
-        <div>
-        <img src="img/logo.jpg" style="width: 100px; height: 75px;" alt="CEMS Logo">
-        <h1>Campus Event Management System</h1>
-        <p>Organize, manage, and participate in campus events seamlessly</p>
-        </div>
- </header>
+    <!--http://localhost/cems/lab02/index.html-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initialscale=1.0">
+        
+        <!--Embedded CSS Style
+        <style>
+            h3 {background-color: #F3DDB3;
+            color: #000000;
+            }
+        </style> -->
 
- <nav>
+    </head>
+
+<body>
     <div>
- <a href="#">CEMS</a>
-        <ul>
-            <li><a href="index.html" >Home</a></li>
+        <header class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content"></div>
+            <img src="img/logo.jpg" style="width: 100px; height: 75px;" alt="CEMS Logo">
+            <h1>Campus Event Management System</h1>
+            <p>Organize, manage, and participate in campus events seamlessly</p>
+        </header>
+    </div>
+
+ <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="brand">CEMS</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="register.html">Register</a></li>
-             <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
     </div>
  </nav>
 
-<section>
+<section class="intro">
     <h3>Event Listing</h3>
     <div>
         <table border="1" align="center">
@@ -32,7 +50,12 @@
             </table>
             </div>
             <div>
-                <table width="100%" border="1">
+                <table id="event_table" width="100%" border="1">
+                    <tr>
+                        <th>Festival </th>
+                        <th>Sport</th>
+                        <th>Festival</th>
+                    </tr>
             </div>
             <tr>
                 <th>Waterfall Hike</th> 
@@ -40,17 +63,33 @@
                 <th>Makey makey boh</th>
             </tr>
             <tr>
-                <td><img src="img/event1.jpg" style="width:100%;"/></td>
-                <td><img src="img/event2.jpg" style="width:100%;"/></td>
-                <td><img src="img/event3.jpg" style="width:100%;"/></td>
+                <td><img src="img/event1.jpg" style="width:100%;" style="width:100%;"/></td>
+                <td><img src="img/event2.jpg" style="width:100%;" style="width:100%;"/></td>
+                <td><img src="img/event3.jpg" style="width:100%;" style="width:100%;"/></td>
             </tr>
             <tr>
                 <td>Kionsom Waterfall</td>
                 <td>KL Forest Eco Park</td>
                 <td>Melaka Heritage City</td>
             </tr>
+            <tr>
+                <td>Markas Pasukan Simpanan TLDM</td>
+                <td>TLDM Sepanggar</td>
+                <td>Kiulu</td>
+            </tr>
+            <tr>
+                <td>Labuan International Sea Sports Complex</td>
+                <td>Universiti Tun Hussein Onn</td>
+                <td>Universiti Malaysia Terengganu</td>
+            </tr>
+
         </table>
     </div>
     </section>
+    <section class="listing">
+
+    <footer>
+        <p> © 2025 Campus Event Management System | All Rights Reserved</p>
+    </footer>
 
  </body>
