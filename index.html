@@ -1,34 +1,31 @@
-    <!--http://localhost/cems/lab02/index.html-->
+<!-- http://localhost/cems/lab03/register.html -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style.css">
-        <meta name="viewport" content="width=device-width, initialscale=1.0">
-        
-        <!--Embedded CSS Style
-        <style>
-            h3 {background-color: #F3DDB3;
-            color: #000000;
-            }
-        </style> -->
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Campus Event Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
 <body>
-    <div>
-        <header class="hero">
-            <div class="overlay"></div>
-            <div class="hero-content"></div>
-            <img src="img/logo.jpg" style="width: 100px; height: 75px;" alt="CEMS Logo">
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="img/logo.jpg" class="logo" alt="CEMS Logo">
             <h1>Campus Event Management System</h1>
             <p>Organize, manage, and participate in campus events seamlessly</p>
-        </header>
-    </div>
+        </div>
+    </header>
 
  <nav class="navbar">
     <div class="nav-container">
         <a href="#" class="brand">CEMS</a>
+        <div class="menu-icon" id="menu-icon"> 
+            <i class="fas fa-bars"></i> 
+        </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="register.html">Register</a></li>
@@ -92,4 +89,10 @@
         <p> © 2025 Campus Event Management System | All Rights Reserved</p>
     </footer>
 
+    <script>
+        // Toggle mobile menu
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        menuIcon.onclick = () => navLinks.classList.toggle('active');
+    </script>
  </body>
