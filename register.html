@@ -1,45 +1,155 @@
-<div>
-        <h1>Campus Event Management System</h1>
-        <p>Organize, manage, and participate in campus events seamlessly</p>
-    </div>
-<section>
-    <h3>Register</h3>
-    <form>
-        <fieldset>
-            <legend>Category</legend>
-            <label>
-                <input type="radio" name="category" value="staff" required> Staff
-            </label>
-            <label><input type="radio" name="category" value="student">Student</label>
-            <label><input type="radio" name="category" value="public"> Public</label>
-        </fieldset>
-        <div>
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Anya Forger">
+<!-- http://localhost/cems/lab03/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Campus Event Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="img/logo.jpg" class="logo" alt="CEMS Logo">
+            <h1>Campus Event Management System</h1>
+            <p>Organize, manage, and participate in campus events seamlessly</p>
         </div>
-        <div>  
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.edu">
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">CEMS</a>
+            <div class="menu-icon" id="menu-icon"> 
+                <i class="fas fa-bars"></i> 
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </div>
-        <div>
-            <label for="phone">Phone</label><br>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+60 12-345 6789">
-        </div>
-        <div><label for="password">Password</label><br>
-        <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password" placeholder="Choose a password">
-        </div>
-        <div>
-            <label>Recommend event about:</label><br>
-            <input type="checkbox" name="event[]" value="workshop"> Workshop<br>
-            <input type="checkbox" name="event[]" value="seminar"> Seminar<br>
-            <input type="checkbox" name="event[]" value="competition"> Competition<br>
-            <input type="checkbox" name="event[]" value="festival"> Festival<br>
-            <input type="checkbox" name="event[]" value="sport"> Sport<br>
-            <input type="checkbox" name="event[]" value="course"> Course<br>
-        </div>
-        <div>
-            <button type="submit">Register</button>
-            <button type="reset">Reset</button>
-        </div>
-    </form>
-</section>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="register-section">
+            <h3>Register</h3>
+            <form action="" method="post" name="registration_form">
+                <fieldset>
+                    <legend>Category</legend>
+                    <label><input type="radio" name="category" value="staff" required> Staff</label>
+                    <label><input type="radio" name="category" value="student"> Student</label>
+                    <label><input type="radio" name="category" value="public"> Public</label>
+                </fieldset>
+
+                <div>
+                    <label for="name">Full Name</label><br>
+                    <input type="text" id="name" name="name" required autocomplete="name" placeholder="Anya Forger">
+                </div>
+
+                <div>  
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.edu">
+                </div>
+
+                <div>
+                    <label for="phone">Phone</label><br>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+60 11-2624 7270 call me">
+                </div>
+
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password" placeholder="Choose a password">
+                </div>
+                
+                <div>
+                    <label>Recommend event about:</label><br>
+                    <input type="checkbox" name="event[]" value="workshop"> Workshop<br>
+                    <input type="checkbox" name="event[]" value="seminar"> Seminar<br>
+                    <input type="checkbox" name="event[]" value="competition"> Competition<br>
+                    <input type="checkbox" name="event[]" value="festival"> Festival<br>
+                    <input type="checkbox" name="event[]" value="sport"> Sport<br>
+                    <input type="checkbox" name="event[]" value="course"> Course<br>
+                </div>
+                
+                <div style="text-align:center; margin-top: 16px;">
+                    <button type="submit" class="btn">Register</button>
+                    <button type="reset" class="btn secondary">Reset</button>
+                </div>
+            </form>
+            <p id="output"></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Campus Event Management System | All Rights Reserved</p>
+    </footer>
+
+    <script>
+  // Toggle mobile menu
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.getElementById('nav-links');
+  menuIcon.onclick = () => navLinks.classList.toggle('active');
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+    const output = document.getElementById("output");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Always prevent default first
+
+      // Get input values
+      const category = document.querySelector('input[name="category"]:checked');
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const checkboxes = document.querySelectorAll('input[name="event[]"]');
+      let checkedEvents = [];
+
+      // ✅ 1. Validate at least one event selected
+      for (const box of checkboxes) {
+        if (box.checked) checkedEvents.push(box.value);
+      }
+      if (checkedEvents.length === 0) {
+        output.style.color = "red";
+        output.textContent = "Please select at least one recommended event.";
+        return;
+      }
+
+      // ✅ 2. Validate phone number (must be 10 digits and numeric)
+      if (!/^\d{10}$/.test(phone)) {
+        output.style.color = "red";
+        output.textContent = "Phone number must be 10 digits and numeric only.";
+        return;
+      }
+
+      // ✅ 3. Validate password length (6–8 characters)
+      if (password.length < 6 || password.length > 8) {
+        output.style.color = "red";
+        output.textContent = "Password must be between 6 and 8 characters.";
+        return;
+      }
+
+      // ✅ 4. If all good → Display all validated info
+      output.style.color = "green";
+      output.innerHTML = `
+        <strong>Registration Successful!</strong><br><br>
+        <b>Category:</b> ${category ? category.value : "N/A"}<br>
+        <b>Name:</b> ${name}<br>
+        <b>Email:</b> ${email}<br>
+        <b>Phone:</b> ${phone}<br>
+        <b>Events:</b> ${checkedEvents.join(", ")}<br>
+      `;
+    });
+  });
+</script>
+
+</body>
+</html>
