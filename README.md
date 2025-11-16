@@ -21,20 +21,36 @@ Design the following web pages for CEMS:
 3. **Login Page** – `login.html`
 4. **Forgot Password Page** – `forgot_password.html`
 
-📌## Lab 2 (Week 3): CSS Fundamentals 
+## Lab 2 (Week 3): CSS Fundamentals 
 To apply responsive design on the Campus Event Management System using CSS. This lab sets
 the stage for future enhancements including responsiveness, interactivity, backend integration,
 and user management.More into designing the website using css, internal and external embedded
 
-📌### Tasks
+### Tasks
 Banyak, tak rajin nak list satu2 :D
 -hero banner
 -color change when mouse hover
 -table style
 -sticky footer
 
-📌## Lab 3 (Week 3):  
-📌### Tasks
+## Lab 3 (Week 4):  
+To apply JavaScript and CSS on the Campus Event Management System for responsive design.
+This lab sets the stage for future enhancements including responsiveness, interactivity, backend
+integration, and user management
+
+### Tasks
+Mostly adjust javascript for buttons
+& css
+
+## Lab 4 (Week 6):  
+To apply PHP to the Campus Event Management System for responsive design. This lab sets the
+stage for future enhancements, including responsiveness, interactivity, backend integration, and
+user management.
+
+### Tasks
+- change all .html file into .php
+- forms
+- i focused more on css here bcause i couldnt figure out the php dalam kelas, lol
 
 These pages are interconnected through hyperlinks, forming the basic navigation structure of the system.
 
