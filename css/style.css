@@ -362,3 +362,55 @@ footer p {
   margin: 0;
   letter-spacing: 0.5px;
 }
+
+
+/* ===== Register Action Page Styling ===== */
+.confirmation-section {
+  max-width: 440px;
+  margin: 120px auto;
+  background: linear-gradient(135deg, #fff5fa 0%, #ffe9f3 100%);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: #4a3b41;
+  font-family: "Arial", sans-serif;
+}
+
+.confirmation-section h2 {
+  text-align: center;
+  color: #a73f75;
+  margin-bottom: 24px;
+}
+
+.confirmation-section p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.confirmation-section ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.confirmation-section li {
+  margin-bottom: 6px;
+}
+
+.confirmation-section a.edit-link {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f28bbd 0%, #e075a8 100%);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(242, 139, 189, 0.3);
+}
+.confirmation-section a.edit-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(242, 139, 189, 0.4);
+}
